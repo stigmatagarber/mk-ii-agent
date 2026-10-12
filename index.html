@@ -64,7 +64,9 @@ section{padding:96px 0}
 header{position:sticky;top:0;z-index:40;background:rgba(251,250,247,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{height:40px;width:auto}
+.brand img{height:34px;width:auto}
+.brand b{display:block;font-family:Montserrat,sans-serif;font-weight:700;font-size:15px;line-height:1.1;letter-spacing:-.01em}
+.brand small{display:block;font-size:11px;color:var(--muted);line-height:1.2}
 nav{display:flex;gap:26px;font-size:15px;color:var(--muted)}
 nav a{text-decoration:none}
 nav a:hover{color:var(--ink)}
@@ -195,8 +197,9 @@ header .btn{padding:10px 20px;font-size:14px}
 /* footer */
 footer{background:#0f0e0c;color:rgba(255,255,255,.6);padding:56px 0 34px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.flogo{display:inline-block;background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:16px}
-.flogo img{height:36px;width:auto}
+.flogo{margin-bottom:16px}
+.flogo b{color:#fff}
+.flogo small{color:rgba(255,255,255,.5)}
 footer h4{font-family:Montserrat,sans-serif;font-weight:600;font-size:15px;color:#fff;margin-bottom:14px}
 footer ul{list-style:none}
 footer li{margin-bottom:10px}
@@ -260,7 +263,7 @@ footer li span{display:block;font-size:12px;color:rgba(255,255,255,.45)}
 
 <header>
   <div class="wrap">
-    <a class="brand" href="https://iiuniversitet.ru/"><img src="https://iiuniversitet.ru/img/53012067.png" alt="Центр обучения нейросетям iiuniversitet.ru"></a>
+    <a class="brand" href="https://iiuniversitet.ru/"><img src="https://iiuniversitet.online/kurs-antikrizis/img/logo.png" alt=""><span><b>iiuniversitet.ru</b><small>Центр обучения нейросетям</small></span></a>
     <nav>
       <a href="#program">Программа</a>
       <a href="#video">Видео</a>
@@ -557,7 +560,7 @@ footer li span{display:block;font-size:12px;color:rgba(255,255,255,.45)}
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <div class="flogo"><img src="https://iiuniversitet.ru/img/53012067.png" alt="iiuniversitet.ru"></div>
+        <a class="brand flogo" href="https://iiuniversitet.ru/"><img src="https://iiuniversitet.online/kurs-antikrizis/img/logo.png" alt=""><span><b>iiuniversitet.ru</b><small>Центр обучения нейросетям</small></span></a>
         <p>Центр обучения нейросетям Павла Лебедева. Курсы, мастер-классы и консультации по ИИ для работы и бизнеса.</p>
       </div>
       <div>
