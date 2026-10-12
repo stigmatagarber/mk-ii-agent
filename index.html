@@ -72,7 +72,7 @@ header .btn{padding:10px 20px;font-size:14px}
 
 /* hero */
 .hero{padding:0;min-height:600px;display:flex;align-items:stretch}
-.hero-photo{position:absolute;inset:0 0 0 auto;width:58%;background:url("https://iiuniversitet.online/kurs-antikrizis/img/author.jpg") 50% 22%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+.hero-photo{position:absolute;inset:0 0 0 auto;width:58%;background:url("https://iiuniversitet.online/kurs-antikrizis/img/author.jpg") 35% 22%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
 .hero .wrap{display:flex;flex-direction:column;justify-content:center;padding-top:72px;padding-bottom:0;width:100%}
 .hero-text{max-width:560px}
 .hero h1{margin-bottom:20px}
@@ -137,11 +137,12 @@ header .btn{padding:10px 20px;font-size:14px}
 
 /* speed */
 .speed{border-radius:20px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}
-.srow{display:grid;grid-template-columns:1fr 120px 220px;gap:20px;align-items:center;padding:16px 24px;border-top:1px solid var(--line)}
+.srow{display:grid;grid-template-columns:1fr 110px 100px 170px;column-gap:20px;align-items:center;padding:16px 24px;border-top:1px solid var(--line)}
 .srow:first-child{border-top:0;background:var(--linen);font-size:13px;font-weight:600;color:var(--muted)}
-.srow .m{color:var(--muted)}
-.srow .a{font-weight:600}
-.srow .x{display:inline-block;margin-left:8px;background:var(--yellow);border-radius:999px;padding:2px 10px;font-size:13px;font-weight:600;white-space:nowrap}
+.srow:first-child span:nth-child(3){grid-column:3/5}
+.srow .m{color:var(--muted);white-space:nowrap}
+.srow .a{font-weight:600;white-space:nowrap}
+.srow .x{justify-self:start;background:var(--yellow);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600;white-space:nowrap}
 .note{font-size:13px;color:var(--muted);margin-top:14px}
 
 /* manifesto */
@@ -166,14 +167,8 @@ header .btn{padding:10px 20px;font-size:14px}
 
 /* certificate */
 .cert{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.cert-mock{background:#fff;border-radius:16px;padding:40px 36px;box-shadow:0 30px 60px -28px rgba(40,30,15,.3),0 0 0 1px var(--line);text-align:center;position:relative}
-.cert-mock::after{content:"";position:absolute;inset:12px;border:1.5px solid var(--sand);border-radius:10px;pointer-events:none}
-.cert-mock img{height:36px;width:auto;margin:0 auto 18px}
-.cert-mock .t{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;letter-spacing:-.02em}
-.cert-mock .s{color:var(--muted);font-size:14px;margin:6px 0 22px}
-.cert-mock .n{border-bottom:1.5px solid var(--ink);display:inline-block;padding:0 30px 4px;font-size:18px;margin-bottom:18px}
-.cert-mock .c{font-size:14px;color:var(--muted)}
-.seal{width:64px;height:64px;border-radius:50%;background:var(--yellow);margin:18px auto 0;display:grid;place-items:center;font-family:Montserrat,sans-serif;font-weight:700;font-size:13px}
+.cert-img{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(40,30,15,.3)}
+.cert-img img{width:100%;height:auto}
 
 /* tariffs */
 .tariffs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -226,7 +221,8 @@ footer li span{display:block;font-size:12px;color:rgba(255,255,255,.45)}
   .mani .art{display:none}
   .stats{grid-template-columns:1fr 1fr}
   .gallery{grid-template-columns:repeat(3,1fr)}
-  .srow{grid-template-columns:1fr;gap:4px;padding:14px 18px}
+  .srow{grid-template-columns:auto 1fr;gap:6px 12px;padding:14px 18px}
+  .srow>span:first-child,.srow .m{grid-column:1/-1}
   .srow:first-child{display:none}
   .srow .m::before{content:"Вручную: "}
   .speaker-grid .sp-photo{max-width:420px}
@@ -408,15 +404,15 @@ footer li span{display:block;font-size:12px;color:rgba(255,255,255,.45)}
     <p class="lead">Сравнили, сколько времени уходит на типовые задачи вручную и с помощью нейросвязок</p>
     <div class="speed">
       <div class="srow"><span>Задача</span><span>Вручную</span><span>С нейросвязками</span></div>
-      <div class="srow"><span>Написать статью на 10 000 символов</span><span class="m">4 часа</span><span class="a">30 минут<span class="x">в 8 раз быстрее</span></span></div>
-      <div class="srow"><span>Изучить целевую аудиторию и составить портрет, аватары и потребности</span><span class="m">8 часов</span><span class="a">15 минут<span class="x">в 32 раза быстрее</span></span></div>
-      <div class="srow"><span>Написать книгу «под ключ» (текст, обложка, верстка)</span><span class="m">3 месяца</span><span class="a">2 часа<span class="x">в 2-5 раз быстрее</span></span></div>
-      <div class="srow"><span>Создать контент-план для соцсетей на месяц (идеи, тексты, картинки, stories, reels)</span><span class="m">1 день</span><span class="a">30 минут<span class="x">в 16 раз быстрее</span></span></div>
-      <div class="srow"><span>Создать сайт под ключ (тексты, дизайн, код)</span><span class="m">1-2 недели</span><span class="a">20 минут<span class="x">в 500 раз быстрее</span></span></div>
-      <div class="srow"><span>Проверить договор и выписать правки, где нарушаются мои интересы</span><span class="m">3 часа</span><span class="a">15 минут<span class="x">в 12 раз быстрее</span></span></div>
-      <div class="srow"><span>Составить текст карточки товара для маркетплейса или Авито</span><span class="m">2 часа</span><span class="a">15 минут<span class="x">в 8 раз быстрее</span></span></div>
-      <div class="srow"><span>Упаковать блог (шапка, highlights, тексты постов, обложки, аватар)</span><span class="m">16 часов</span><span class="a">10 минут<span class="x">в 100 раз быстрее</span></span></div>
-      <div class="srow"><span>Проанализировать таблицу и написать ключевые выводы</span><span class="m">2 часа</span><span class="a">5 минут<span class="x">в 24 раза быстрее</span></span></div>
+      <div class="srow"><span>Написать статью на 10 000 символов</span><span class="m">4 часа</span><span class="a">30 минут</span><span class="x">в 8 раз быстрее</span></div>
+      <div class="srow"><span>Изучить целевую аудиторию и составить портрет, аватары и потребности</span><span class="m">8 часов</span><span class="a">15 минут</span><span class="x">в 32 раза быстрее</span></div>
+      <div class="srow"><span>Написать книгу «под ключ» (текст, обложка, верстка)</span><span class="m">3 месяца</span><span class="a">2 часа</span><span class="x">в 2-5 раз быстрее</span></div>
+      <div class="srow"><span>Создать контент-план для соцсетей на месяц (идеи, тексты, картинки, stories, reels)</span><span class="m">1 день</span><span class="a">30 минут</span><span class="x">в 16 раз быстрее</span></div>
+      <div class="srow"><span>Создать сайт под ключ (тексты, дизайн, код)</span><span class="m">1-2 недели</span><span class="a">20 минут</span><span class="x">в 500 раз быстрее</span></div>
+      <div class="srow"><span>Проверить договор и выписать правки, где нарушаются мои интересы</span><span class="m">3 часа</span><span class="a">15 минут</span><span class="x">в 12 раз быстрее</span></div>
+      <div class="srow"><span>Составить текст карточки товара для маркетплейса или Авито</span><span class="m">2 часа</span><span class="a">15 минут</span><span class="x">в 8 раз быстрее</span></div>
+      <div class="srow"><span>Упаковать блог (шапка, highlights, тексты постов, обложки, аватар)</span><span class="m">16 часов</span><span class="a">10 минут</span><span class="x">в 100 раз быстрее</span></div>
+      <div class="srow"><span>Проанализировать таблицу и написать ключевые выводы</span><span class="m">2 часа</span><span class="a">5 минут</span><span class="x">в 24 раза быстрее</span></div>
     </div>
     <p class="note">*По сравнению с традиционными подходами, по результатам опроса участников наших мастер-классов.</p>
   </div>
@@ -479,15 +475,8 @@ footer li span{display:block;font-size:12px;color:rgba(255,255,255,.45)}
       <h2>Именной сертификат о прохождении</h2>
       <p class="lead" style="margin-bottom:0">Выдаётся всем участникам, кто пройдёт мастер-класс до конца.</p>
     </div>
-    <div class="cert-mock">
-      <img src="https://iiuniversitet.ru/img/53012067.png" alt="iiuniversitet.ru">
-      <div class="t">Сертификат</div>
-      <div class="s">о прохождении мастер-класса «Полная схема ИИ-агентов»</div>
-      <div class="n">Ваше имя</div>
-      <div class="c">Павел Лебедев, основатель iiuniversitet.ru</div>
-      <div class="seal">ИИ</div>
-    </div>
-  </div>
+    <div class="cert-img"><img src="https://iiuniversitet.ru/img/40507549_1280_q90.webp" alt="Именной сертификат о прохождении мастер-класса" loading="lazy"></div>
+      </div>
 </section>
 
 <!-- TARIFFS -->
